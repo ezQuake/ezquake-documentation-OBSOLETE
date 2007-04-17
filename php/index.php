@@ -50,7 +50,9 @@
   <meta name="author" content="<?=META_AUTHOR?>" />
   <meta name="generator" content="http://ezquake.sourceforge.net/docs/about" />
   <title><?=PROJECTNAME?> Manual: <?php echo(htmlspecialchars($renderer->title)); ?></title>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="StyleSheet" type="text/css" href="style.css" title="verze 1" />
+  <link rel="Alternate StyleSheet" type="text/css" href="style2.css" media="screen" title="verze 2 cuky" />
+  <link rel="Alternate Stylesheet" href="http://www.w3.org/StyleSheets/Core/Modernist" media="screen" type="text/css" title="W3C Modernist" />
 </head>
 <body>
 <h1><a href="./"><?=PROJECTNAME?> Manual</a>: <?php echo(htmlspecialchars($renderer->heading)); ?></h1>
