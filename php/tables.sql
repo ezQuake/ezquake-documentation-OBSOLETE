@@ -43,6 +43,18 @@ CREATE TABLE variables
   PRIMARY KEY(id)
 );
 
+CREATE TABLE variables_phys
+(
+  name CHAR(32) NOT NULL DEFAULT '',
+  PRIMARY KEY(name)
+);
+
+CREATE TABLE commands_phys
+(
+  name CHAR(32) NOT NULL DEFAULT '',
+  PRIMARY KEY(name)
+);
+
 CREATE TABLE variables_values_boolean
 (
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,

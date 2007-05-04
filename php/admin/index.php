@@ -111,6 +111,12 @@
             switch ($action) {
                 case "releasecommands": Archive("command"); break; // describe.php
                 case "releasevariables": Archive("variable"); break; // describe.php
+                case "updatephys": $supForms->PhysUploadForm(); break; //
+                case "addphysvars": $supForms->AddPhysVars(); break;
+                case "updatephyscmds": $supForms->PhysCmdUploadForm(); break; //
+                case "addphyscmds": $supForms->AddPhysCmds(); break;
+                case "clearphyscmds": $supForms->ClearPhysCmds(); break;
+                case "clearphysvars": $supForms->ClearPhysVars(); break;
             }
             echo '</code></pre>';
         }   // end of release access
@@ -197,6 +203,8 @@
             // variables support
             case "varsupport": include("inc/form_support.php"); break;
             case "varssetdefaults": $supForms->ReadVarsSetDefaults(); break;
+        	case "varsmissing": $supForms->ViewMissingVars(); break;
+        	case "cmdsmissing": $supForms->ViewMissingCmds(); break;
             // index
             case "updateindex": $indForms->Update(); break;
             // history

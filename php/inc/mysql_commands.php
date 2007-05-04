@@ -328,6 +328,58 @@ class CommandsData extends DocsData // interface for data storage
         return $lid;
     }
     
+    function AddPhysCmds($cmds)
+    {
+		$sqlp = "";
+		$i = 0;
+		
+		foreach($cmds as $c)
+		{
+			if ($i) $sqlp .= ", ";
+			$sqlp .= "('".addslashes($c)."')";
+			$i = 1;
+		}
+		
+		$sql = "INSERT INTO {$this->tblPrefix}_phys (name) VALUES {$sqlp}";
+		
+		if (!my_mysql_query($sql))
+			return False;
+		
+		return True;
+	}
+	
+	function ClearPhysCmds()
+	{
+		$sql = "DELETE FROM {$this->tblPrefix}_phys WHERE 1";
+		if (!my_mysql_query($sql))
+			return False;
+
+		return True;		
+	}
+    
+    function GetMissingCmds()
+    {
+    	$ret = array();
+		
+		// vars from documentation that don't brother in physical vars
+		$sql = "SELECT d.name FROM {$this->tblPrefix} AS d LEFT JOIN {$this->tblPrefix}_phys AS p ON d.name = p.name WHERE isnull(p.name) && (d.active < 1)"; 
+
+        if (!($r = my_mysql_query($sql)))
+            return False;
+
+		while ($d = mysql_fetch_row($r)) $ret[0][] = $d[0];
+
+		// vars from physical vars that don't brother in the documentation
+		$sql = "SELECT p.name FROM {$this->tblPrefix} AS d RIGHT JOIN {$this->tblPrefix}_phys AS p ON d.name = p.name WHERE isnull(d.name)"; 
+
+        if (!($r = my_mysql_query($sql)))
+            return False;
+
+		while ($d = mysql_fetch_row($r)) $ret[1][] = $d[0];
+		
+		return $ret;
+	}
+    
     function AssignArgs($cId, $args)
     {
         $cId = (int) $cId;
@@ -465,6 +517,58 @@ class VariablesData extends DocsData
         return True;
 
     }
+    
+    function AddPhysVars($vars)
+    {
+		$sqlp = "";
+		$i = 0;
+		
+		foreach($vars as $v)
+		{
+			if ($i) $sqlp .= ", ";
+			$sqlp .= "('".addslashes($v)."')";
+			$i = 1;
+		}
+		
+		$sql = "INSERT INTO {$this->tblPrefix}_phys (name) VALUES {$sqlp}";
+		
+		if (!my_mysql_query($sql))
+			return False;
+		
+		return True;
+	}
+	
+	function ClearPhysVars()
+	{
+		$sql = "DELETE FROM {$this->tblPrefix}_phys WHERE 1";
+		if (!my_mysql_query($sql))
+			return False;
+
+		return True;		
+	}
+    
+    function GetMissingVars()
+    {
+    	$ret = array();
+		
+		// vars from documentation that don't brother in physical vars
+		$sql = "SELECT d.name FROM {$this->tblPrefix} AS d LEFT JOIN {$this->tblPrefix}_phys AS p ON d.name = p.name WHERE isnull(p.name) && (d.active < 1)"; 
+
+        if (!($r = my_mysql_query($sql)))
+            return False;
+
+		while ($d = mysql_fetch_row($r)) $ret[0][] = $d[0];
+
+		// vars from physical vars that don't brother in the documentation
+		$sql = "SELECT p.name FROM {$this->tblPrefix} AS d RIGHT JOIN {$this->tblPrefix}_phys AS p ON d.name = p.name WHERE isnull(d.name)"; 
+
+        if (!($r = my_mysql_query($sql)))
+            return False;
+
+		while ($d = mysql_fetch_row($r)) $ret[1][] = $d[0];
+		
+		return $ret;
+	}
     
     function AddArgs($varId, $type, $args)
     {   // assigns detailed description of variable value(s)

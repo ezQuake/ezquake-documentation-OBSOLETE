@@ -516,6 +516,7 @@ class SupportForms
         $this->data = new SupportData;
         $this->grdata = new GroupsData;
         $this->vardata = new VariablesData;
+        $this->cmddata = new CommandsData;
     }
     
     function OptionsBuilds()
@@ -576,6 +577,105 @@ class SupportForms
         }
         $this->data->VarsSetDefaults($d);
     }
+    
+    function PhysUploadForm()
+    {
+		include ("inc/form_add_phys.php");
+	}
+	
+	function ViewMissingVars()
+	{
+		$mv = $this->vardata->GetMissingVars();
+		echo "<h3>Documented vars that are missing in the client</h3>";
+		if (!$mv[0]) {
+			echo "<p>No vars found</p>";
+		} else
+		{
+			echo "<ol>";
+			foreach($mv[0] as $v)
+			{
+				echo "\n<li>{$v}</li>";
+			}
+			echo "</ol>";
+		}
+		
+		if (!$mv[1]) {
+		    echo "<p>No vars found</p>";
+		} else
+		{		
+			echo "<h3>Undocumented vars</h3>";
+			echo "<ol>";
+			foreach($mv[1] as $v)
+			{
+				echo "\n<li>{$v}</li>";
+			}
+			echo "</ol>";
+		}	
+	}
+	
+	function AddPhysVars()
+	{
+		$pl = $_REQUEST["physlist"];
+		$vars = explode("\r\n", $pl);
+		$this->vardata->AddPhysVars($vars);
+		echo "<p>Physical variables added.</p>";
+	}
+	
+	function ClearPhysVars()
+	{
+		$this->vardata->ClearPhysVars();
+		echo "<p>Physical variables cleared. You should upload a new list now.</p>";
+	}
+	
+    function PhysCmdUploadForm()
+    {
+		include ("inc/form_add_physcmd.php");
+	}
+	
+	function ViewMissingCmds()
+	{
+		$mv = $this->cmddata->GetMissingCmds();
+		echo "<h3>Documented cmds that are missing in the client</h3>";
+		
+		if (!$mv[0]) {
+		    echo "<p>No commands found</p>";
+		} else
+		{
+			echo "<ol>";
+			foreach($mv[0] as $v)
+			{
+				echo "\n<li>{$v}</li>";
+			}
+			echo "</ol>";
+		}		
+
+		echo "<h3>Undocumented cmds</h3>";
+		if (!$mv[1]) {
+		    echo "<p>No commands found</p>";
+		} else
+		{
+			echo "<ol>";
+			foreach($mv[1] as $v)
+			{
+				echo "\n<li>{$v}</li>";
+			}
+			echo "</ol>";
+		}	
+	}
+	
+	function AddPhysCmds()
+	{
+		$pl = $_REQUEST["physlist"];
+		$vars = explode("\r\n", $pl);
+		$this->cmddata->AddPhysCmds($vars);
+		echo "<p>Physical commands added.</p>";
+	}
+	
+	function ClearPhysCmds()
+	{
+		$this->cmddata->ClearPhysCmds();
+		echo "<p>Physical commands removed. You should upload new list now.</p>";
+	}
 }
 
 class IndexForms
