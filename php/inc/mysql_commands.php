@@ -330,21 +330,11 @@ class CommandsData extends DocsData // interface for data storage
     
     function AddPhysCmds($cmds)
     {
-		$sqlp = "";
-		$i = 0;
-		
-		foreach($cmds as $c)
+		foreach($vars as $v)
 		{
-			if ($i) $sqlp .= ", ";
-			$sqlp .= "('".addslashes($c)."')";
-			$i = 1;
+			$sql = "INSERT INTO {$this->tblPrefix}_phys (name) VALUES ('".addslashes($v)."')";
+			my_mysql_query($sql);	
 		}
-		
-		$sql = "INSERT INTO {$this->tblPrefix}_phys (name) VALUES {$sqlp}";
-		
-		if (!my_mysql_query($sql))
-			return False;
-		
 		return True;
 	}
 	
@@ -362,7 +352,7 @@ class CommandsData extends DocsData // interface for data storage
     	$ret = array();
 		
 		// vars from documentation that don't brother in physical vars
-		$sql = "SELECT d.name FROM {$this->tblPrefix} AS d LEFT JOIN {$this->tblPrefix}_phys AS p ON d.name = p.name WHERE isnull(p.name) && (d.active < 1)"; 
+		$sql = "SELECT d.name FROM {$this->tblPrefix} AS d LEFT JOIN {$this->tblPrefix}_phys AS p ON d.name = p.name WHERE isnull(p.name) && (d.active > 0)"; 
 
         if (!($r = my_mysql_query($sql)))
             return False;
@@ -520,21 +510,11 @@ class VariablesData extends DocsData
     
     function AddPhysVars($vars)
     {
-		$sqlp = "";
-		$i = 0;
-		
 		foreach($vars as $v)
 		{
-			if ($i) $sqlp .= ", ";
-			$sqlp .= "('".addslashes($v)."')";
-			$i = 1;
+			$sql = "INSERT INTO {$this->tblPrefix}_phys (name) VALUES ('".addslashes($v)."')";
+			my_mysql_query($sql);	
 		}
-		
-		$sql = "INSERT INTO {$this->tblPrefix}_phys (name) VALUES {$sqlp}";
-		
-		if (!my_mysql_query($sql))
-			return False;
-		
 		return True;
 	}
 	
@@ -552,7 +532,7 @@ class VariablesData extends DocsData
     	$ret = array();
 		
 		// vars from documentation that don't brother in physical vars
-		$sql = "SELECT d.name FROM {$this->tblPrefix} AS d LEFT JOIN {$this->tblPrefix}_phys AS p ON d.name = p.name WHERE isnull(p.name) && (d.active < 1)"; 
+		$sql = "SELECT d.name FROM {$this->tblPrefix} AS d LEFT JOIN {$this->tblPrefix}_phys AS p ON d.name = p.name WHERE isnull(p.name) && (d.active > 0)"; 
 
         if (!($r = my_mysql_query($sql)))
             return False;
