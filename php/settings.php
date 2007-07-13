@@ -6,6 +6,9 @@ define ("PROJECTNAME", "ezQuake");
 // this will be used also in google search:
 define ("BASEURL", "http://ezquake.sourceforge.net/docs/");
 
+// all database tables must have this prefix
+define ("DB_TABLES_PREFIX", "");
+
 // put the info about the author of the documentation content here
 // you can use html tags in here, will be displayed on the bottom of the page))
 define ("AUTHOR_INFO", "<a href=\"http://sourceforge.net/users/johnnycz/\">JohnNy_cz</a>");

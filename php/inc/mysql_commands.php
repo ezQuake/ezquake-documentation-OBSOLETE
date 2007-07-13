@@ -5,16 +5,29 @@
  */
 
 define (MAXCMDARGS, 9);
-define (COMMANDSTABLEPREFIX, 'commands');
 define (MAXVARENUMS, 15);
-define (VARIABLESTABLEPREFIX, 'variables');
-define (MANUALSTABLEPREFIX, 'manuals');
-define (VARMGROUPSTABLE, 'variables_mgroups');
-define (VARGROUPSTABLE, 'variables_groups');
-define (VARSUPPORTTABLE, 'variables_support');
-define (OPTIONSTABLEPREFIX, 'options');
-define (INDEXTABLE, 'settings_index');
-define (SEARCHHITSTABLE, 'search_hits');
+
+define (TBL_NAME_BUILDS,      DB_TABLES_PREFIX.'builds');
+
+define (COMMANDSTABLEPREFIX,  DB_TABLES_PREFIX.'commands');
+
+define (MANUALSTABLEPREFIX,   DB_TABLES_PREFIX.'manuals');
+
+define (OPTIONSTABLEPREFIX,   DB_TABLES_PREFIX.'options');
+
+define (SEARCHHITSTABLE,      DB_TABLES_PREFIX.'search_hits');
+
+define (TBL_NAME_SESSIONS,    DB_TABLES_PREFIX.'sessions');
+
+define (INDEXTABLE,           DB_TABLES_PREFIX.'settings_index');
+
+define (TBL_NAME_USERS,       DB_TABLES_PREFIX.'users');
+
+define (VARIABLESTABLEPREFIX, DB_TABLES_PREFIX.'variables');
+define (VARMGROUPSTABLE,      DB_TABLES_PREFIX.'variables_mgroups');
+define (VARGROUPSTABLE,       DB_TABLES_PREFIX.'variables_groups');
+define (VARSUPPORTTABLE,      DB_TABLES_PREFIX.'variables_support');
+
 
 class DocsData
 // abstract, common functions and structures for variables, commands, command-line options and manuals
@@ -206,7 +219,7 @@ class DocsData
         if (($rows = (int) $rows) < 1) $rows = 20;
         $sql = "
         SELECT c.name as Entry, h.action as Action, u.name as User, DATE_FORMAT(h.time, '%Y-%m-%d %h:%i') as Time
-        FROM {$this->tblPrefix}_history as h, users as u, {$this->tblPrefix} as c
+        FROM {$this->tblPrefix}_history as h, {TBL_NAME_USERS} as u, {$this->tblPrefix} as c
         WHERE u.id = h.id_user && c.id = h.{$this->foreignkey}
         ORDER BY h.id DESC LIMIT {$rows};
         ";
@@ -1129,7 +1142,7 @@ class SupportData
     
     function SupportData()
     {
-        $this->tablebuilds = "builds";
+        $this->tablebuilds = TBL_NAME_BUILDS;
         $this->tablesupport = VARSUPPORTTABLE;
     }
     
@@ -1169,7 +1182,7 @@ class SupportData
     
     function GetBuilds()
     {
-        $sql = "SELECT id, abbr, shortname, title FROM builds WHERE 1";
+        $sql = "SELECT id, abbr, shortname, title FROM {$this->tablebuilds} WHERE 1";
         if (!($r = my_mysql_query($sql)))
             return False;
         
@@ -1273,14 +1286,14 @@ class SearchHits
     {   
         $string = addslashes(substr($string, 0, 255)); // physical string length limit is even lower
         $sql = "SELECT hits FROM {$this->table} WHERE query = '{$string}' LIMIT 1";
-        if (!$d = mysql_query($sql))
+        if (!$d = my_mysql_query($sql))
             return false;
         if (!$d = mysql_fetch_row($d))
             $sql = "INSERT INTO {$this->table} (query) VALUES ('{$string}')";
         else
             $sql = "UPDATE {$this->table} SET hits = hits + 1 WHERE query = '{$string}' LIMIT 1";
 
-        return mysql_query($sql);
+        return my_mysql_query($sql);
     }
     
     function GetTopHits($count = 10)
@@ -1290,7 +1303,7 @@ class SearchHits
             $count = 10;
             
         $sql = "SELECT query, hits FROM {$this->table} ORDER BY hits DESC LIMIT {$count}";
-        if (!$d = mysql_query($sql))
+        if (!$d = my_mysql_query($sql))
             return false;
 
         $retbuf = array();

@@ -1,10 +1,10 @@
 <?php
 
+	require_once("settings.php");
 	require_once("inc/mysql_access.php");
 	require_once("inc/mysql_commands.php");
 	require_once("inc/common.php");
 	require_once("inc/renderer.php");
-	require_once("settings.php");
 
     $db = array();
     $db["manuals"] = new ManualsData;
