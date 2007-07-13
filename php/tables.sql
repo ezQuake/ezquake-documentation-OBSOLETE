@@ -1,7 +1,7 @@
 CREATE TABLE commands
 (
   id SMALLINT UNSIGNED AUTO_INCREMENT,
-  name CHAR(32) NOT NULL DEFAULT '' UNIQUE,
+  name CHAR(32) NOT NULL DEFAULT "" UNIQUE,
   active TINYINT UNSIGNED NOT NULL DEFAULT 1,
   description TEXT,
   syntax TEXT,
@@ -13,7 +13,7 @@ CREATE TABLE commands_arguments
 (
   id MEDIUMINT UNSIGNED AUTO_INCREMENT NOT NULL,
   id_command SMALLINT UNSIGNED NOT NULL DEFAULT 0,
-  name VARCHAR(16) NOT NULL DEFAULT '',
+  name VARCHAR(16) NOT NULL DEFAULT "",
   description TEXT,
   PRIMARY KEY(id)
 );
@@ -33,7 +33,7 @@ CREATE TABLE variables
 (
   id SMALLINT UNSIGNED AUTO_INCREMENT,
   id_vargroup SMALLINT UNSIGNED NOT NULL DEFAULT 0,
-  name CHAR(32) NOT NULL DEFAULT '' UNIQUE,
+  name CHAR(32) NOT NULL DEFAULT "" UNIQUE,
   active TINYINT UNSIGNED NOT NULL DEFAULT 1,
   description TEXT,
   type ENUM("integer", "float", "string", "boolean", "enum"),
@@ -45,13 +45,13 @@ CREATE TABLE variables
 
 CREATE TABLE variables_phys
 (
-  name CHAR(32) NOT NULL DEFAULT '',
+  name CHAR(32) NOT NULL DEFAULT "",
   PRIMARY KEY(name)
 );
 
 CREATE TABLE commands_phys
 (
-  name CHAR(32) NOT NULL DEFAULT '',
+  name CHAR(32) NOT NULL DEFAULT "",
   PRIMARY KEY(name)
 );
 
@@ -97,7 +97,7 @@ CREATE TABLE variables_support
     id INT UNSIGNED AUTO_INCREMENT,
     id_variable SMALLINT UNSIGNED NOT NULL DEFAULT 0,
     id_build SMALLINT UNSIGNED NOT NULL DEFAULT 0,
-    default_value CHAR(32) NOT NULL DEFAULT '',
+    default_value CHAR(32) NOT NULL DEFAULT "",
     PRIMARY KEY(id),
     UNIQUE(id_variable, id_build),
     INDEX(id_variable)
@@ -106,9 +106,9 @@ CREATE TABLE variables_support
 CREATE TABLE builds
 (
   id TINYINT UNSIGNED AUTO_INCREMENT NOT NULL,
-  abbr CHAR(4) NOT NULL DEFAULT '',
-  shortname CHAR(12) NOT NULL DEFAULT '',
-  title CHAR(32) NOT NULL DEFAULT '',
+  abbr CHAR(4) NOT NULL DEFAULT "",
+  shortname CHAR(12) NOT NULL DEFAULT "",
+  title CHAR(32) NOT NULL DEFAULT "",
   PRIMARY KEY(id),
   UNIQUE(abbr),
   UNIQUE(shortname),
@@ -125,8 +125,8 @@ INSERT INTO builds (abbr, shortname, title) VALUES ('MAC', 'Mac-OSX', 'Mac OS X'
 CREATE TABLE variables_mgroups
 (
   id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  name VARCHAR(32) NOT NULL DEFAULT '',
-  title VARCHAR(128) NOT NULL DEFAULT '',
+  name VARCHAR(32) NOT NULL DEFAULT "",
+  title VARCHAR(128) NOT NULL DEFAULT "",
   active TINYINT UNSIGNED NOT NULL DEFAULT 1,
   PRIMARY KEY(id),
   UNIQUE(name),
@@ -148,9 +148,9 @@ CREATE TABLE variables_groups
 CREATE TABLE users
 (
   id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  login CHAR(16) NOT NULL DEFAULT '',
-  name CHAR(32) NOT NULL DEFAULT '',
-  password CHAR(32) NOT NULL DEFAULT '',
+  login CHAR(16) NOT NULL DEFAULT "",
+  name CHAR(32) NOT NULL DEFAULT "",
+  password CHAR(32) NOT NULL DEFAULT "",
   access TINYINT UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY(id),
   UNIQUE(login),
@@ -162,9 +162,9 @@ CREATE TABLE sessions
   id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   id_user SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   ip CHAR(16) NOT NULL DEFAULT '127.0.0.1',
-  host CHAR(255) NOT NULL DEFAULT '',
-  browser CHAR(255) NOT NULL DEFAULT '',
-  idstr CHAR(32) NOT NULL DEFAULT '' UNIQUE,
+  host CHAR(255) NOT NULL DEFAULT "",
+  browser CHAR(255) NOT NULL DEFAULT "",
+  idstr CHAR(32) NOT NULL DEFAULT "" UNIQUE,
   lasthit TIMESTAMP(14),
   PRIMARY KEY(id)
 );
@@ -173,8 +173,8 @@ CREATE TABLE manuals
 (
   id MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT,
   id_group SMALLINT UNSIGNED NOT NULL DEFAULT 0,
-  name CHAR(32) NOT NULL DEFAULT '',
-  title CHAR(128) NOT NULL DEFAULT '',
+  name CHAR(32) NOT NULL DEFAULT "",
+  title CHAR(128) NOT NULL DEFAULT "",
   content TEXT,
   active TINYINT UNSIGNED NOT NULL DEFAULT 1,
   PRIMARY KEY(id),
@@ -185,8 +185,8 @@ CREATE TABLE manuals
 CREATE TABLE manuals_groups
 (
   id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
-  abbr CHAR(32) NOT NULL DEFAULT '',
-  name CHAR(128) NOT NULL DEFAULT '',
+  abbr CHAR(32) NOT NULL DEFAULT "",
+  name CHAR(128) NOT NULL DEFAULT "",
   PRIMARY KEY(id),
   UNIQUE(abbr),
   UNIQUE(name)
@@ -214,9 +214,9 @@ CREATE TABLE commands_support
 CREATE TABLE options
 (
     id MEDIUMINT UNSIGNED AUTO_INCREMENT NOT NULL,
-    name CHAR(64) NOT NULL DEFAULT '',
+    name CHAR(64) NOT NULL DEFAULT "",
     description TEXT,
-    args CHAR(128) NOT NULL DEFAULT '',
+    args CHAR(128) NOT NULL DEFAULT "",
     argsdesc TEXT,
     flags SET('GL only', 'Linux only', 'Win32 only', 'Software only'),
     active TINYINT UNSIGNED NOT NULL DEFAULT 1,
@@ -239,9 +239,9 @@ CREATE TABLE settings_index
 (
   name CHAR(64) NOT NULL,
   itype ENUM("variable", "command", "command-line option"),
-  desc1 char(255) NOT NULL DEFAULT '',
-  desc2 char(255) NOT NULL DEFAULT '',
-  desc3 char(255) NOT NULL DEFAULT '',
+  desc1 char(255) NOT NULL DEFAULT "",
+  desc2 char(255) NOT NULL DEFAULT "",
+  desc3 char(255) NOT NULL DEFAULT "",
   igroup SMALLINT UNSIGNED NOT NULL DEFAULT 0,  
   PRIMARY KEY(name, itype)
 );

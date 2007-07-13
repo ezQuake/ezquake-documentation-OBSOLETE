@@ -13,6 +13,16 @@ define ("DB_TABLES_PREFIX", "");
 // you can use html tags in here, will be displayed on the bottom of the page))
 define ("AUTHOR_INFO", "<a href=\"http://sourceforge.net/users/johnnycz/\">JohnNy_cz</a>");
 
+// content of the builds table
+$BUILDS_TABLE_CONTENT = Array(
+  "(abbr, shortname, title) VALUES ('W-GL', 'W32:OpenGL', 'Windows: OpenGL')",
+  "(abbr, shortname, title) VALUES ('W-SW', 'W32:Soft', 'Windows: Software')",
+  "(abbr, shortname, title) VALUES ('GLX', 'Lin:GLX', 'Linux: GLX')",
+  "(abbr, shortname, title) VALUES ('X11', 'Lin:X11', 'Linux: X11')",
+  "(abbr, shortname, title) VALUES ('SVGA', 'Lin:SVGA', 'Linux: SVGA')",
+  "(abbr, shortname, title) VALUES ('MAC', 'Mac-OSX', 'Mac OS X')"
+  );
+
 // html meta headers
 // author (usually the same as author_info but you cannot use html tags in here
 define ("META_AUTHOR", "http://sourceforge.net/users/johnnycz/");
