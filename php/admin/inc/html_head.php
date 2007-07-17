@@ -6,5 +6,5 @@
   <title><?=PROJECTNAME?> Documentation Administration</title>
   <link type="text/css" href="style.css" rel="StyleSheet" />
   </head>
-  <body onload="SmartHide()">
+  <body>
     <h1><?=PROJECTNAME?> Docs Admin</h1>

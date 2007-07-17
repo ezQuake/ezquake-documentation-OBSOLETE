@@ -158,6 +158,12 @@
 <p>* Use 'Physically remove' only for invalid variable; not for outdated or renamed ones.</p>
 </form>
 
+<script type="text/javascript">
+  <!--
+  SmartHide();
+  -->
+</script>
+
 <?php	
     }
 ?>
