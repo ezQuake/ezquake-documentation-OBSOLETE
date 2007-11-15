@@ -1,0 +1,95 @@
+1.9 changelog
+
+3	fix	johnnycz	cl_fakename and in-built teamplay messages fix
+3	fix	tonik	PF_logfrag invalid player name fix
+2	feature	qqshka	r_tracker_color_* settings
+2	fix	qqshka	menu sensitivity fix
+2	fix	qqshka	fixed loading of userinfo variables
+2	fix	qqshka	vid_restart memory leak bugfix, map change crash bugfix
+3	change	qqshka	developer 2 debug level
+1	feature	qqshka	faster (chunked) downloads - FTE protocol extension
+3	fix	qqshka	gl_max_size not ignored in config.cfg anymore
+3	feature	qqshka	support for more FTE protocol extensions (modeldbl, entitydbl*, spawnstatic2)
+2	feature	qqshka	scr_showcrosshair hides cross in +showscores
+3	fix	qqshka	colored string line end parsing
+3	fix	qqshka	menu mouse sensitivity on low FPS
+1	feature	qqshka	teamoverlay: scr_teaminfo_order, scr_teaminfo_health, scr_teaminfo_armor_style, scr_teaminfo_weapon_style
+3	feature	qqshka	r_tracker_string_suicides, r_tracker_string_died
+3	fix	disconnect	re_trigger bugfix
+2	feature	johnnycz	con_tilde_mode 1 make typing ~ char possible
+3	change	qqshka	r_particles_count does what -particles option did
+2	fix	qqshka	window command working again
+3	feature	johnnycz	lastloc, lastpowerup macros (%L, %o)
+3	change	hexum	emodel, pmodel to userinfo
+2	fix	hexum	OSS to ALSA switch bugfix
+2	fix	hexum	sound init crash bugfix
+1	feature	johnnycz	ownfrags HUD elements (You fragged Thresh)
+2	feature	johnnycz	set_tp command, easier teamplay messages scripting
+2	change	qqshka	square coronas to circle ones
+1	fix	qqshka	QTV playback fixes: chat support, download, mapchange, buffering
+2	feature	tonik, johnnycz	keys hud element, shows pressed keys
+2	feature	johnnycz	mvd_autotrack_lockteam - keep auto-tracking only one team
+3	feature	johnnycz	scale property for tracking hud element
+3	fix	hexum	-mevdev bugfix
+1	feature	cokeman	r_bloom_* / gl_bloom* blooming
+2	fix	qqshka	con_shift in disconnected mode fixed
+2	fix	disconnect	mouse updating in DGA and X11
+2	change	up2nogood	cl_crypt_rcon default to 1
+2	change	up2nogood	cl_window_caption default to 1
+2	change	johnnycz	"if" command support for rich condition syntax
+2	change	johnnycz	cl_onload allows you to execute any command on startup
+2	change	tei	-data cmdline option
+1	feature	johnnycz	ingame menu
+2	feature	gavoja	notify hud element
+2	fix	gavoja	scoreboard label position bugfix
+2	change	tonik	in_builtinkeymap 0 by default
+2	fix	tonik	made AltGr-combinations work
+1	fix	cokeman	software rendering features from OpenGL version - HUD editor, pictures scaling, png support, text scaling, better caching, off-screen clipping, common GUI drawing
+2	fix	tei	less toon-like coronas
+2	feature	qqshka	vid_borderless removes window borders in windowed mode
+2	fix	tonik	gl_lightmode 2, textures were 25% darker
+2	fix	tonik	turb textures were being brightened even without lightmaps
+3	feature	up2nogood	$W macro giving white led
+2	feature	tonik	sys_inactiveSound playing sounds even if window is not focused
+2	fix	up2nogood	reduce setinfo string usage
+3	feature	dkure	gamedir macro
+2	feature	dkure	cl_backpackfilter
+3	feature	dkure	EF_GREEN
+3	feature	dkure	glqwcl explosion type
+3	fix	all of us	tons of inappreciable bugfixes
+3	feature	cokeman	style property to speed HUD element
+2	fix	tuna	Mac build maintenance
+3	change	up2nogood	msg setinfo default 1
+3	fix	borisu	hud262 elements drawing
+2	fix	dkure	support all sizes of skins - fixes TF skin bug
+2	feature	dkure	conback loaded also from gamedir - possible to have special TF conback
+2	change	up2nogood	menu updates
+3	change	johnnycz	removed cl_oldPl, cl_newCompletion 0
+3	change	up2nogood	draw_fps renamed to scr_scoreboard_drawfps
+1	feature	dkure	pk3 support
+2	feature	qqshka	demo_autotrack - listen to demo-recorded autotrack
+2	feature	qqshka	togglespec command
+1	feature	johnnycz	teamforceskins, enemyforceskins
+1	feature	tonik	VWEP support - see which weapon the player is holding; [r_drawvweps], [cl_novweps]
+2	change	disconnect	allow independent physics toggling without restarting the client
+2	feature	qqshka	[gl_rl_globe] - customization of rocket light
+2	feature	qqshka	[in_di_bufsize] - larger direct input buffer can prevent losing mouse positions info on low FPS
+1	feature	qqshka	powerup shells [gl_powerupshells], [gl_powerupshells_style], [gl_powerupshells_size] main code by Electro / LordHavoc
+3	fix	qqshka	chaticon high ping bugfix
+2	feature	johnnycz	[autotrack] universal command
+
+[2900]
+
+special thanks:
+cokeman for lot's of work on software rendering
+dkure for neat virtual filesystem
+qqshka for qtv support updating
+cokeman for work on new GUI system
+
+PaRadiZer for help on Intel console flickering bug
+senft for HUD config
+Electro, LordHavoc for powerup shells code
+phrosty for direct input buffer increase patch
+
+resolve or submit task:
+mac
