@@ -66,7 +66,7 @@
 2	change	up2nogood	menu updates
 3	change	johnnycz	removed [cl_oldPl], [cl_newCompletion] 0
 3	change	up2nogood	draw_fps renamed to [scr_scoreboard_drawfps]
-1	feature	dkure	pk3 support
+1	feature	dkure	pk3, zip, gz, tar, doompack support, faster opening of files, VFS, load all present paks
 2	feature	qqshka	[demo_autotrack] - listen to demo-recorded autotrack
 2	feature	qqshka	[togglespec] command
 1	feature	johnnycz	[teamforceskins], [enemyforceskins]
@@ -77,19 +77,44 @@
 1	feature	qqshka	powerup shells [gl_powerupshells], [gl_powerupshells_style], [gl_powerupshells_size] main code by Electro / LordHavoc
 3	fix	qqshka	chaticon high ping bugfix
 2	feature	johnnycz	[autotrack] universal command
-
-[2900]
+1	fix	johnnycz	[mvd_autotrack] fixes and refactoring + [mvd_autotrack] 4 - improved KTPro-like algorithm
+3	feature	disconnect	DarkPlaces Memory Manager
+2	feature	cokeman	semi-transparent images for status bar possible
+2	feature	borisu	[cl_curlybraces] - enhanced scripting using { .. } blocks; split script lines by '\' char
+2	feature	johnnycz	[timedemo] with [demo_benchmarkdumps] outputs $log_dir/timedemo.log
+1	feature	johnnycz	[scr_teaminfo] for MultiView demos playback, [scr_teaminfo_show_self]
+1	change	tonik	skyboxes turned off by default, we support 24bit sky textures now
+1	feature	cokeman	qw:// protocol support
+3	feature	johnnycz	[mvd_utils_reinit] may help when mvd_autotrack doesn't work
+1	feature	cokeman	use already running client to run demos, QTV files, qw:// handlers
+2	change	up2nogood	[vid_hwgammacontrol] default to 2
+2	change	up2nogood	[cl_demoplay_flash] default to 0.33
+2	feature	qqshka	[qtv_adjustbuffer] dynamic buffer adjusting by changing playback speed
+1	feature	dkure	[mp3_playertype] - more media players support (winamp, xmms, xmms2, audacious, mpd)
+3	feature	johnnycz	[hud_clock_format] - more clock formats
+2	feature	borisu	[cvar_in], [cvar_out], [alias_in], [alias_out] - QW262 config compatibility
+1	feature	tonik	[cl_vsync_lag_fix] reduces delay in rendering for vertical synchronization with independent physics, check with [vidlag] HUD element
+2	feature	deurk	coilgun particle trail, use setinfo railtrail 1..7
+1	feature	qqshka	scr_shownick_* customization variables
+3	fix	tonik	clan arena TE_EXPLOSION packets bugfix
+2	feature	johnnycz	[cl_sayfilter_coloredtext] [cl_sayfilter_sendboth]
+3	change	tonik	better way of fbskins, watervis, allow_lumas protection
+2	fix	tonik	old Quake dm4 "near quad movement" bugfix, used LordHavoc's implementation 
+[3277]
 
 special thanks:
-cokeman for lot's of work on software rendering
-dkure for neat virtual filesystem
+dkure for enormous ammount of work on virtual filesystem
+cokeman for lot's of work on new GUI system
+cokeman for updating the software rendering code
 qqshka for qtv support updating
-cokeman for work on new GUI system
+tonik for keeping the code sane
 
 PaRadiZer for help on Intel console flickering bug
 senft for HUD config
-Electro, LordHavoc for powerup shells code
+Electro for powerup shells code
+LordHavoc for movement CM_HullTrace fix and powerup shells code
 phrosty for direct input buffer increase patch
+shaga for helping out our users and for fragfile update
 
 resolve or submit task:
 mac
