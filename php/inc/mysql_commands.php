@@ -343,7 +343,7 @@ class CommandsData extends DocsData // interface for data storage
     
     function AddPhysCmds($cmds)
     {
-		foreach($vars as $v)
+		foreach($cmds as $v)
 		{
 			$sql = "INSERT INTO {$this->tblPrefix}_phys (name) VALUES ('".addslashes($v)."')";
 			my_mysql_query($sql);	
