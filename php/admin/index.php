@@ -111,14 +111,17 @@
             switch ($action) {
                 case "releasecommands": Archive("command"); break; // describe.php
                 case "releasevariables": Archive("variable"); break; // describe.php
-                case "updatephys": $supForms->PhysUploadForm(); break; //
                 case "addphysvars": $supForms->AddPhysVars(); break;
-                case "updatephyscmds": $supForms->PhysCmdUploadForm(); break; //
                 case "addphyscmds": $supForms->AddPhysCmds(); break;
                 case "clearphyscmds": $supForms->ClearPhysCmds(); break;
                 case "clearphysvars": $supForms->ClearPhysVars(); break;
             }
             echo '</code></pre>';
+
+            switch ($action) {
+                case "updatephyscmds": $supForms->PhysCmdUploadForm(); break; //
+                case "updatephys": $supForms->PhysUploadForm(); break; //
+            }
         }   // end of release access
         
     	switch ($action)   // normal registered user access
