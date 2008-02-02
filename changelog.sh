@@ -1,7 +1,7 @@
 SRC=$1
 OUT=changelog.html
 FEAT_PAT="s/.\t\w*\t\([^\t]*\)\t\(.*\)/<li>\2 - feature by <span class='author'>\1<\/span><\/li>/"
-FIX_PAT="s/.\t\w*\t\(\w*\)\t\(.*\)/<li>\2 - fixed by <span class='author'>\1<\/span><\/li>/"
+FIX_PAT="s/.\t\w*\t\([^\t]*\)\t\(.*\)/<li>\2 - fixed by <span class='author'>\1<\/span><\/li>/"
 CHANGE_PAT="s/.\t\w*\t\(\w*\)\t\(.*\)/<li>\2 - fixed by <span class='author'>\1<\/span><\/li>/"
 HDR_PAT="s|.\t\(.*\)|<h2>\1</h2>|"
 THNX_PAT="s|.\t\(\w*\)\t\(.*\)|<li><span class='author'>\1</span> \2</li>|"
