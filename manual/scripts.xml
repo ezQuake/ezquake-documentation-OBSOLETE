@@ -69,7 +69,7 @@
 		<p>Although a common board has more than 100 keys those are often not enough for a serious quaker especially when you are into teamplay and need many keybindings near to each other. Here, multiple keybinding becomes very usefull. For example you could use your mousebuttons twice. Once for shooting weapons and also for issueing messages to your team:</p>
 		<pre>
 		bind mouse1 "+rl"
-		bind mouse2 "+hop
+		bind mouse2 "+hop"
 		bind mouse3 "+best"
 		bind space "+team_m"
 		
