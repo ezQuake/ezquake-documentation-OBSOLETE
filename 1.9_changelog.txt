@@ -8,7 +8,7 @@
 3	change	qqshka	[developer] 2 debug level
 1	feature	qqshka	faster (chunked) downloads - FTE protocol extension
 3	fix	qqshka	[gl_max_size] not ignored in config.cfg anymore
-3	feature	qqshka	support for more FTE protocol extensions (modeldbl, entitydbl*, spawnstatic2)
+3	feature	disconnect	support for more FTE protocol extensions (modeldbl, entitydbl*, spawnstatic2)
 2	feature	qqshka	[scr_showcrosshair] hides cross in +showscores
 3	fix	qqshka	colored string line end parsing
 3	fix	qqshka	menu mouse sensitivity on low FPS
@@ -125,7 +125,8 @@ b	PaRadiZer	for help on Intel console flickering bug
 b	senft	for HUD config
 b	Electro	for powerup shells code
 b	LordHavoc	for powerup shells code and CM_HullTrace gotos :) 
-b	phrosty	for direct input buffer increase patch
+b	phrosty	for direct input buffer increase patch and Vista 64bit support
 b	shaga	for helping out our users and for fragfile update
+b	ruskie	for helping our users when we are asleep (always)
 a	biomass	for extensive testing and feedback
 z	[3506]
