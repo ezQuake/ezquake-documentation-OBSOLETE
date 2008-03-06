@@ -38,7 +38,7 @@
 2	change	johnnycz	"[if]" command support for rich condition syntax
 2	change	johnnycz	[cl_onload] allows you to execute any command on startup
 2	change	tei	-data cmdline option
-1	feature	johnnycz	ingame menu
+1	feature	johnnycz	ingame menu [menu_ingame]
 2	feature	gavoja	notify hud element
 2	fix	gavoja	scoreboard label position bugfix
 2	change	tonik	[in_builtinkeymap] 0 by default
@@ -110,6 +110,12 @@
 3	feature	johnnycz	[gl_part_tracer1_color] [gl_part_tracer2_color] to change color of rocket trail
 3	fix	cokeman	support showing more than 4 GB of memory
 3	change	johnnycz	[match_auto_logconsole] default to 1
+2	feature	johnnycz	[trackkiller] command that will switch view to the player who fragged the player we are tracking
+2	feature	johnnycz	[legacyquake] command which turns off new features which can disturb old players
+3	feature	johnnycz	[cfg_save_onquit] automatically save your configuration
+1	feature	johnnycz	f_modified accepts plaguespak, debug and ruohis model(s)
+3	change	qqshka	MAX_INFO_STRING changed to 1024
+1	feature	qqshka	[scr_weaponstats] live weapon stats support = old +wp_stats done better
 a	dkure	for enormous ammount of work on virtual filesystem
 a	cokeman	for lot's of work on new GUI system
 a	cokeman	for updating the software rendering code
@@ -121,4 +127,5 @@ b	Electro	for powerup shells code
 b	LordHavoc	for powerup shells code and CM_HullTrace gotos :) 
 b	phrosty	for direct input buffer increase patch
 b	shaga	for helping out our users and for fragfile update
-z	[3431]
+a	biomass	for extensive testing and feedback
+z	[3506]
