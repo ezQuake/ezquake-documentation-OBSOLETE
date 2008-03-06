@@ -83,7 +83,7 @@
 2	feature	johnnycz	[timedemo] with [demo_benchmarkdumps] outputs $log_dir/timedemo.log
 1	feature	johnnycz	[scr_teaminfo] for MultiView demos playback, [scr_teaminfo_show_self]
 1	change	tonik	skyboxes turned off by default, we support 24bit sky textures now
-1	feature	cokeman	qw:// protocol support
+1	feature	cokeman	qw:// protocol support for windows
 3	feature	johnnycz	[mvd_utils_reinit] may help when mvd_autotrack doesn't work
 1	feature	cokeman	use already running client to run demos, QTV files, qw:// handlers
 2	change	up2nogood	[vid_hwgammacontrol] default to 2
@@ -116,6 +116,7 @@
 1	feature	johnnycz	f_modified accepts plaguespak, debug and ruohis model(s)
 3	change	qqshka	MAX_INFO_STRING changed to 1024
 1	feature	qqshka	[scr_weaponstats] live weapon stats support = old +wp_stats done better
+3	feature	cokeman	Demo rewinding (go back to start of demo and fastforward to wanted position)
 a	dkure	for enormous ammount of work on virtual filesystem
 a	cokeman	for lot's of work on new GUI system
 a	cokeman	for updating the software rendering code
