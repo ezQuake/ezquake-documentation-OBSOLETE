@@ -234,7 +234,7 @@ class VariablesForms extends DocsForms
     }
 
     function ReadAddVar($userId)
-    {   // todo implement
+    {
         $data = array();
         $data["name"] = $_REQUEST["v_name"];
         $data["description"] = $_REQUEST["v_desc"];
@@ -262,6 +262,36 @@ class VariablesForms extends DocsForms
         else
             echo "{$this->whoami} has been added / updated.";
     }
+    
+    function ReadMassAdd($userId)
+    {
+		$n = (int) $_POST["varscount"];
+		$r = array();
+		
+		if (!$n) {
+			echo "<p>No vars to add</p>";
+			return;
+		}
+		
+		for ($i = 0; $i < $n; $i++)
+		{
+			if (strlen($_POST["vardesc"][$i])) {
+				$e = array();
+				$e["name"] = $_POST["varname"][$i];
+				$e["description"] = $_POST["vardesc"][$i];
+				$e["remarks"] = $_POST["varremarks"][$i];
+				$e["type"] = $_POST["vartype"][$i];
+				$e["valdesc"] = "";
+				$e["v_boolean_true"] = "";
+				$e["v_boolean_false"] = "";
+				$r[] = $e;
+			}
+		}
+		
+		$succ = $this->data->MassAdd($r, $userId);
+		
+		echo "<p>$succ variable(s) have been added.</p>";
+	}
 }
 
 class ManualsForms extends DocsForms
@@ -583,29 +613,54 @@ class SupportForms
 		include ("inc/form_add_phys.php");
 	}
 	
+	function TypeMiniRadios($c)
+	{
+		$types = array("string", "integer", "float", "boolean", "enum");
+		$i = 0;
+		foreach ($types as $t) {
+			// if ($i++) echo " | ";
+			echo "    <label><input type='radio' name='vartype[{$c}]' value='{$t}' />".$t{0}."</label>\n";
+		}
+	}
+	
 	function ViewMissingVars()
 	{
 		$mv = $this->vardata->GetMissingVars();
-		echo "<h3>Documented vars that are missing in the client</h3>";
-		if (!$mv[0]) {
+		echo "<h3>Undocumented vars</h3>";
+		if (!$mv[1]) {
 			echo "<p>No vars found</p>";
 		} else
 		{
-			echo "<ol>";
-			foreach($mv[0] as $v)
+			echo "\n<form action='' method='post'>\n";
+			echo "<input type='hidden' name='varscount' value='".count($mv[1])."' />\n";
+			echo "<input type='hidden' name='action' value='massaddvar'>\n";
+			echo "<table><thead><tr><th>Variable</th><th>Description</th><th>Type</th><th>Remarks</th></tr></thead>\n<tbody>\n";
+			$c = 0;
+			foreach($mv[1] as $v)
 			{
-				echo "\n<li>{$v}</li>";
+				echo "<tr>\n";
+				echo "  <td>{$v}</td>\n";
+				echo "  <td><input type='hidden' name='varname[{$c}]' value='".htmlspecialchars($v)."' />"
+					."<input type='text' name='vardesc[{$c}]' value='' size='20' /></td>\n";
+				echo "  <td>\n";
+				$this->TypeMiniRadios($c);
+				echo "  </td>\n";
+				echo "  <td><input type='text' name='varremarks[{$c}]' value='' size='20' /></td>\n";
+				echo "</tr>";
+				$c++;
 			}
-			echo "</ol>";
+			echo "</tbody>\n</table>\n\n";
+			echo "<input type='submit' value='Submit' />\n";
+			echo "</form>";
 		}
-		
-		if (!$mv[1]) {
+
+		echo "<h3>Documented vars that are missing in the client</h3>";
+		if (!$mv[0]) {
 		    echo "<p>No vars found</p>";
 		} else
 		{		
-			echo "<h3>Undocumented vars</h3>";
 			echo "<ol>";
-			foreach($mv[1] as $v)
+			foreach($mv[0] as $v)
 			{
 				echo "\n<li>{$v}</li>";
 			}

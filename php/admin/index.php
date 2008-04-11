@@ -132,6 +132,7 @@
             case "addoptform": $optForms->FormOption(); break;
             case "addcmd": $cmdForms->ReadAddCmd($session->userId); break;
             case "addvar": $varForms->ReadAddVar($session->userId); break;
+            case "massaddvar": $varForms->ReadMassAdd($session->userId); break;
             case "addman": $manForms->ReadAddMan($session->userId); break;
             case "addopt": $optForms->ReadAddOpt($session->userId); break;
             case "renamecommand":

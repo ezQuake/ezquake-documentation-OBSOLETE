@@ -487,6 +487,16 @@ class VariablesData extends DocsData
         return $lid;
     }
     
+    function MassAdd($d, $userId)
+	{
+		$success = 0;
+		foreach ($d as $v)
+		{
+			if ($this->Add($v, $userId)) $success++;
+		}
+		return $success;
+	}
+    
     function Update($id, $data, $userId)
     {
         if (!($id = (int) $id))

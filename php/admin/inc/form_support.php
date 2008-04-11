@@ -3,17 +3,7 @@
     $select_builds = "<select name=\"id_build\">".$supForms->OptionsBuilds()."</select>";
 ?>
 
-<p>Use following lines to create <code>defaults.cfg</code> config to be uploaded here:</p>
-<pre><code>cfg_reset
-cfg_save_aliases 0
-cfg_save_binds 0
-cfg_save_cmdline 0
-cfg_save_cmds 0
-cfg_save_sysinfo 0
-cfg_save_cvars 1
-cfg_save_unchanged 1
-cfg_save_userinfo 2
-cfg_save defaults</code></pre>
+<p>Use <code>dump_default</code> command to create <code>cvar_defaults.cfg</code> config to be uploaded here:</p>
 
 <form enctype="multipart/form-data" action="index.php" method="post">
 <div><input type="hidden" name="action" value="varssetdefaults" />
