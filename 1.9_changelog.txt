@@ -130,4 +130,7 @@ b	phrosty	for direct input buffer increase patch and Vista 64bit support
 b	shaga	for helping out our users and for fragfile update
 b	ruskie	for helping our users when we are asleep (always)
 a	biomass	for extensive testing and feedback
-z	[3506]
+b	vegetous	for portuguese br keymap
+2	fix	johnnycz	[scr_drawVFrags] works again
+2	feature	qqshka	allow models use _luma textures
+z	[3563]
