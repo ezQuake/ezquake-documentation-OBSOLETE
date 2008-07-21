@@ -339,7 +339,8 @@ class VariablesRendData extends BaseRendData
             echo "\">".$build["title"]."</span> ";
         }
         
-        echo "</p>\n  <p class=\"default\">Default: <span>".htmlspecialchars($default)."</span></p>";
+        $def = strtr($default, "\x10\x11", "[]"); // Quake-related (ugly to put it here)
+        echo "</p>\n  <p class=\"default\">Default: <span>".htmlentities($def)."</span></p>";
         
         switch ($this->var["type"])
         {
