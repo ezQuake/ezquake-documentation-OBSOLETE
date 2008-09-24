@@ -6,7 +6,7 @@
     include("../scripts/common-xmlparse.php");
     include("../scripts/common.php");
     
-    $cmds = ScanDir("commands", "xml");
+    $cmds = myScanDir("commands", "xml");
     $commands = new CommandsData;
     
     foreach ($cmds as $cmd)

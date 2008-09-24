@@ -110,14 +110,14 @@ function IsIdSafe($s)
     return $s == IdSafe($s);
 }
 
-  function ScanDir($sdir, $ext = "", $recursive = False)  
+  function myScanDir($sdir, $ext = "", $recursive = False)  
   { // returns array of files inside given dir
     $a = array();
     $handle = opendir($sdir);
     while ($file = readdir($handle)) {
       if (($file!=".") && ($file!=".."))
         if (is_dir($sdir."/".$file)) {
-          if ($recursive) $a += ScanDir($sdir."/".$file);
+          if ($recursive) $a += myScanDir($sdir."/".$file);
         } else {
           if ($ext == "" || HasExtension($file,$ext,False)) {
             $a[] = $sdir."/".$file;

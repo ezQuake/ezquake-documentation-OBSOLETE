@@ -6,7 +6,7 @@
     include("../scripts/common-xmlparse.php");
     include("../scripts/common.php");
     
-    $vars = ScanDir("variables", "xml");
+    $vars = myScanDir("variables", "xml");
     $variables = new VariablesData;
     
     my_mysql_query ("DELETE FROM variables WHERE 1;");
