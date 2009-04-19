@@ -506,7 +506,7 @@ class VariablesData extends DocsData
         $remarks = addslashes($data["remarks"]);
         $valdesc = $data["valdesc"];
         $type = addslashes($data["type"]);
-        $user = (int) $user;
+        $userId = (int) $userId;
         
         if (!($r = my_mysql_query("SELECT type FROM {$this->tblPrefix} WHERE id = $id LIMIT 1")))
             return False;
@@ -524,7 +524,7 @@ class VariablesData extends DocsData
         if (!$this->AddArgs($id, $data["type"], $valdesc))
             return False;
         
-        if (!my_mysql_query("INSERT INTO {$this->tblPrefix}_history ({$this->foreignkey}, id_user, action) VALUES ({$id}, {$user}, '{$change}')"))
+        if (!my_mysql_query("INSERT INTO {$this->tblPrefix}_history ({$this->foreignkey}, id_user, action) VALUES ({$id}, {$userId}, '{$change}')"))
             return False;
         
         return True;
