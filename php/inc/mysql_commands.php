@@ -409,7 +409,7 @@ class CommandsData extends DocsData // interface for data storage
         if (!($ret = $this->GetContent($id)))
             return False;
         
-        $r = my_mysql_query("SELECT name, description FROM {$this->tblPrefix}_arguments WHERE {$this->foreignkey} = {$id}");
+        $r = my_mysql_query("SELECT name, description FROM {$this->tblPrefix}_arguments WHERE {$this->foreignkey} = {$id} ORDER BY id ASC");
         if (!$r)
             return False;
         
