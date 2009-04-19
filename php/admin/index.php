@@ -4,6 +4,12 @@
  * ezQuake Docs administration tool main script
  */
 
+    header("Expires: Mosn, 26 Jul 1997 05:00:00 GMT");
+    header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
+    header("Cache-Control: no-store, no-cache, must-revalidate");
+    header("Cache-Control: post-check=0, pre-check=0", false);
+    header("Pragma: no-cache");
+
     require_once("../settings.php");            // text constants, documentation system settings
     require_once("../inc/mysql_access.php");    // create mysql connection resource
     require_once("../inc/common.php");          // text and html processing functions
