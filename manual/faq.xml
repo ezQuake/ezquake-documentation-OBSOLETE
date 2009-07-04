@@ -9,12 +9,12 @@
 		<h align="center">Frequently Asked Questions</h>
 		<hr />
 		<h>What do I need in order to play QW?</h>
-			<p>A great place to start is <a href="http://equake.quakeworld.nu/">eQuake</a>. This is a pack that contains everything you need in order to play (ezQuake client, configs, maps, textures, tools, scripts, Frogbots, documentation and more). Put together to supply beginners as well as veterans with an easy-to-use QuakeWorld installation.</p>
+			<p>A great place to start is <a href="http://www.nquake.com/">nQuake</a>. This is a pack that contains everything you need in order to play (ezQuake client, configs, maps, textures, tools, scripts, Frogbots, documentation and more). Put together to supply beginners as well as veterans with an easy-to-use QuakeWorld installation.</p>
 		<h>I need a good cfg, and what commands should I know?</h>
 			<p>Go to the <a href="help/manual/configs.xml">configs section</a> to find an easy-to-use cfg.  To see a list of important commands, <a href="help/manual/important_commands.xml">go here</a>.</p>
 		<h>Where can I find servers?</h>
 			<p>The best way to find servers is with a server browser. Hit Escape, choose Multiplayer, and then Server Browser.</p>
-			<p>If you're a lazy bastard or you're seeking specific servers, you can view a good online browser <a href="http://servu.quakeworld.nu/?a=findserver">here</a>.</p>
+			<p>If you're a lazy bastard or you're seeking specific servers, you can view a good online browser <a href="http://www.quakeservers.net/quakeworld/">here</a>.</p>
 		<h>How do I bunnyhop?</h>
 			<p>Bunnyhopping is rather easy if you know how to do it. Unfortunately it is not nearly as easy to explain it but I will try my best.</p>
 			<p>The first skill to master is strafe jumping. Strafe jumping is very easy (and people coming form Quake3 will know how to do it). Just hold one of the strafe buttons pressed while jumping and use your mouse to keep jumping forward. In QW you gain a lot of speed by strafe jumping (actually you strafe faster than running forward, thats the reason). Now to bunnyhop you have to start with a strafe jump. After taking off you have to release the forward button. Keep the strafe button pressed. If you now jump again before you land on the ground you will not only keep on jumping forward again but also keep your speed. Doing that is rather easy the tricky part is to gain speed while doing it. In order to gain speed you have to move the mouse a bit into the same direction into which you strafe. If you move too far your jumps will go off so be careful. Try changing the strafe keys in between each jump. It will be easier to keep your intended direction (and its not very usefull to jump around in a circle really). You can gain even more speed after a rocket jump ar by jumping down a slope.</p>
@@ -26,7 +26,7 @@
 			<p>Example:</p>
 			<pre>ezquake-gl.exe -width 800 -height 600 -bpp 32</pre>
 		<h>Where can I get fullbright skins and how to use them?</h>
-			<p>Grab them <a href="ftp://gibbage.mine.nu/skins/fullbrightskins.zip">here</a> and extract to qw\skins. Make sure that <color>noskins 2</color> is enabled.</p> 
+			<p>Grab them <a href="http://gfx.quakeworld.nu/browse/skins/">here</a> and extract to qw\skins. Make sure that <color>noskins 2</color> is enabled.</p> 
 			<p>Set <color>teamskin [skin]</color> and <color>enemyskin [skin]</color>. You can also set individual skins for players who have quad/pent, but it's not really necessary (look in the cfg for more info on that).</p>
 			<p>Most people use a white fullbright skin for enemies and a red one for teammates, this because white is a bit easier to distinguish.</p>
 		<h>How do I disable powerup blends?</h>
