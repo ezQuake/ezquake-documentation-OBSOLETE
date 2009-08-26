@@ -116,4 +116,5 @@
 2	feature	aas	[gl_lightning_color] [gl_lightning_sparks_size] (default ruleset)
 3	fix	qqshka	skip invalid chars in info strings
 2	change	johnnycz	allow_scripts 0 locked under smackdown ruleset
+1	fix	cokeman	removed fps drop with opened console
 z	[3500-4161]
