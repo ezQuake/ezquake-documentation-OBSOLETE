@@ -1,7 +1,7 @@
 0	ezQuake 2.0 - coming in Q3 2009
 2	feature	PhrostByte	[sshot_name] prefix screenshots with map name
 3	feature	johnnycz	[cl_weaponhide_axe] axe as optional dummy weapon
-2	feature	qqshka	mvd & qtv recording with [mvdrecord] and [mvdstop]
+1	feature	qqshka	mvd cutting & qtv recording with [mvdrecord] and [mvdstop]
 3	feature	johnnycz	inputlag hud item for measuring your reaction time
 2	feature	R00k	server AntiWallHack tweak
 2	feature	Dirk	linux joystick support
@@ -13,12 +13,12 @@
 2	fix	johnnycz	hopefully definitive [mvd_autotrack] fix
 2	feature	johnnycz	[match_auto_unminimize] brings client back from minimized state when countdown starts
 2	change	johnnycz	window caption format changed
-2	fix	cokeman	qw url dialogue answer saving
+1	fix	cokeman	qw url dialogue answer saving
 3	fix	cokeman	hud editor cursor sensitivity
 2	fix	johnnycz	faster server browser pinging phase
 3	fix	johnnycz	some servers would get ping 999
 3	fix	cokeman	demo code clean up
-2	change	cokeman	demo_constrols update
+1	change	cokeman	demo_controls update
 3	feature	johnnycz	[sb_nosockraw] makes SB use UDP QW packet for pinging (+mutithreaded)
 3	change	johnnycz	$weaponnum reflects cl_weaponpreselect setting
 2	feature	raz0	accept multi-packet reply from master server
@@ -46,18 +46,18 @@
 2	feature	johnnycz	[legacyquake] command updated with more stuff
 1	feature	qqshka	interpolate pov angles in spectator mode [cl_physfps_spectator] (increases your ping)
 2	fix	tonik	independent physics interpolation reduced jerkiness/warping
-2	fix	johnnycz	no players will recognized as teammates when teamplay is disabled
+2	fix	johnnycz	no players will be recognized as teammates when teamplay is disabled
 2	feature	avirox	client-side entity transparency support
 3	fix	johnnycz	hud element names case-insensitivy (bye bye legendary 'wtf?' error message)
 2	feature	biomass	r_explosiontype 10 disabled explosion effect completely
 3	fix	biomass	r_explosiontype 9 fixed
 2	fix	cokeman	more elaborated z-fighting fix
-2	feature	biomass	[vid_wideaspect] helps switching your settings easily to widescreen display
+1	feature	biomass	[vid_wideaspect] helps switching your settings easily to widescreen display
 3	fix	electro	textcoords were stretched vertically
 3	fix	qqshka	fix cheat commands functionality (server)
 3	fix	biomass	fix of the display of player's name in multiview
 3	fix	biomass	more multiview fixes
-2	fix	biomass	say_game available via [messagemodeqtvtogame]
+2	feature	biomass	say_game available via [messagemodeqtvtogame]
 3	feature	johnnycz	[fs_search]
 2	feature	qqshka	initial GLSL support (no major features associated yet)
 2	feature	qqshka	[gl_part_detpackexplosion_fire_color] and [gl_part_detpackexplosion_ray_color]
@@ -73,7 +73,7 @@
 3	fix	biomass	[cl_showkeycodes] fixed
 3	feature	biomass	[hud_clock_format] 3 and 4 remove seconds
 3	changes	biomass	better server browser dialogues key control
-2	fix	biomass	set working directory properly so that launching e.g. from web browser doesn't confuse demo browser menu
+1	fix	biomass	set working directory properly so that launching e.g. from web browser doesn't confuse demo browser menu
 2	fix	qqshka	proper full bright pixels on skins (not full bright skins case here)
 2	fix	biomass	fixed loading hud group pictures on startup
 2	feature	biomass	floor-only or wall-only [r_drawflat] modes
@@ -84,13 +84,12 @@
 3	fix	johnnycz	refresh players coloring after joining the game
 3	fix	hexum	cfg_save created config wasn't found by subsequent cfg_load
 3	change	tonik	disable "checking ..." messages for local server
-2	fix	johnnycz	hide teamfortress related stats from scoreboard unless gamedir is fortress
+1	fix	johnnycz	hide teamfortress related stats from scoreboard unless gamedir is fortress
 2	feature	tonik	entity hiding - KTX alpha race mode uses this
 2	feature	moodless	version command prints more info
 1	feature	johnnycz	proper support for QWFwd in server browser
 1	feature	qqshka	[cl_early_packets] lowers the ping feeling on some connections
 2	feature	tonik	more packet entities support
-2	feature	cokeman	[demo_controls] updates
 2	feature	johnnycz	[sb_listcache] caches the list of active servers, allows fast refresh of server browser after startup
 3	change	johnnycz	messagemode2 triggers messagemodeqtvtogame when qtv observing, saves additional key binding
 3	fix	aas	fixed locs saving
@@ -102,7 +101,7 @@
 2	feature	johnnycz	[itemsclock] display which items will spawn soon in mvd/qtv observing
 3	feature	biomass	headers for teams when [hud_teaminfo_show_enemies] is 1
 2	feature	aas	HUD262 load/save support
-2	feature	aas	more models by Primevil and Ruohis accepted by f_modified
+1	feature	aas	more models by Primevil and Ruohis accepted by f_modified
 1	change	aas	options menu structure improved
 3	feature	aas	[cl_fakename_suffix]
 3	fix	R00k	fix in eyes+vwep+twctf behavior
@@ -115,6 +114,6 @@
 3	feature	HyperNewbie	better blood particle look
 2	feature	aas	[gl_lightning_color] [gl_lightning_sparks_size] (default ruleset)
 3	fix	qqshka	skip invalid chars in info strings
-2	change	johnnycz	allow_scripts 0 locked under smackdown ruleset
+1	change	johnnycz	allow_scripts 0 locked under smackdown ruleset
 1	fix	cokeman	removed fps drop with opened console
 z	[3500-4161]
