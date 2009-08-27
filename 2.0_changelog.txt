@@ -8,7 +8,7 @@
 2	feature	johnnycz	[r_viewlastfired] view last fired weapon instead of the current one
 3	change	DrugsBunny	better default water color when using [r_drawflat]
 3	feature	johnnycz	[in_di_buffered] switch between "Immediate data" and buffered Direct Input modes (doesn't affect input lag)
-1	feature	johnnycz	initial [irc] IRC support
+1	feature	johnnycz	initial [irc] support
 2	change	qqshka	[gl_playermip] affects 24-bit skins now too
 2	fix	johnnycz	hopefully definitive [mvd_autotrack] fix
 2	feature	johnnycz	[match_auto_unminimize] brings client back from minimized state when countdown starts
@@ -42,7 +42,7 @@
 2	feature	tonik	NetQuake progs.dat support (WITH_NQPROGS, sv_progtype 0; set sv_forcenqprogs 1)
 3	fix	biomass	server browser won't crash on missing sources.txt
 2	fix	biomass	TCL commands work again
-2	fix	Tuna	Mac pasting from console
+2	fix	Tuna	Mac pasting to console
 2	feature	johnnycz	[legacyquake] command updated with more stuff
 1	feature	qqshka	interpolate pov angles in spectator mode [cl_physfps_spectator] (increases your ping)
 2	fix	tonik	independent physics interpolation reduced jerkiness/warping
