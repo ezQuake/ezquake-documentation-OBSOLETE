@@ -101,19 +101,37 @@ function GetXML($file, $id, &$db)
 
 function MakeArchive($file, &$db)
 {
-    system ("rm -f ".BASEPATH."/{$file}s/*");
-    system ("rm -f ".BASEPATH."/{$file}s.zip");
+	echo "<p>Removing old data...</p>\n";
+	flush();
+    passthru("rm -f ".BASEPATH."/{$file}s/*", $retval);
+    echo "<p>Return code {$retval}</p>\n";
+    passthru("rm -f ".BASEPATH."/{$file}s.zip", $retval);
+    echo "<p>Return code {$retval}</p>\n";
+	echo "<p>Done.</p>";
+	flush();
 
+	echo "<p>Retrieving list of data from the database.</p>\n";
     $entries = $db->GetList(1);
+    echo "<p>Retrieved ".count($entries)." entries</p>\n";
+    
     foreach ($entries as $id => $name)
     {
-        $fp = fopen(BASEPATH."/{$file}s/{$name}.xml", "w");
-        if (!$fp) return;
+    	$filename = BASEPATH."/{$file}s/{$name}.xml"; 
+        $fp = fopen($filename, "w");
+        if (!$fp) {
+			echo "Error: could not open $filename for writing\n";
+			return;
+		}
         fwrite($fp, GetXML($file, $id, $db));
         fclose($fp);
     }
     
-    print_r(system("cd ".BASEPATH."/{$file}s ; find . | zip -9 -@ ../{$file}s.zip"));
+    echo "<p>Files created</p>\n";
+    
+    echo "<p>Executing archiver...</p>\n";
+    passthru("cd ".BASEPATH."/{$file}s ; find . | zip -9 -@ ../{$file}s.zip", $retval);
+    echo "<p>Return value was {$retval}</p>\n";
+    echp "<p>Release finished</p>";
 }
 
 function Archive($type)

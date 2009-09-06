@@ -6,7 +6,7 @@
  * /tmp/persistent/ezquake/describe
  */
 
-define (BASEPATH, "/tmp/persistent/ezquake/describe");
+define (BASEPATH, "/home/persistent/e/ez/ezquake/describedata");
 require_once("../inc/mysql_commands.php");
 
 class Downloader
