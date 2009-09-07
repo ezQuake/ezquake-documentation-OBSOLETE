@@ -1,7 +1,7 @@
 0	ezQuake 2.0 - coming in Q3 2009
 2	feature	PhrostByte	[sshot_name] prefix screenshots with map name
 3	feature	johnnycz	[cl_weaponhide_axe] axe as optional dummy weapon
-1	feature	qqshka	mvd cutting & qtv recording with [mvdrecord] and [mvdstop]
+1	feature	qqshka	mvd cutting &amp; qtv recording with [mvdrecord] and [mvdstop]
 3	feature	johnnycz	inputlag hud item for measuring your reaction time
 2	feature	R00k	server AntiWallHack tweak
 2	feature	Dirk	linux joystick support
