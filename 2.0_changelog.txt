@@ -117,4 +117,23 @@
 1	change	johnnycz	allow_scripts 0 locked under smackdown ruleset
 1	fix	cokeman	removed fps drop with opened console
 3	fix	Tuna	problems on case-sensitive filesystems
-z	[3500-4161]
+2	change	aas	default.cfg not loaded during cfg_load / cfg_reset
+3	fix	johnnycz	preselected weapon (drawviewmodel) shows even when not in inventory
+2	change	johnnycz	win32 software build is with assembler parts enabled again
+2	feature	johnnycz	[scr_conpicture] change console background image dynamically
+3	fix	biomass	filter out protocol verion output
+1	fix	biomass	server browser serverinfo crash, server browser sb_autoupdate 1 crash
+2	change	johnnycz	master.quakeservers.net added to source servers
+3	fix	aas	length calculation for "tracking" HUD element with colored nick
+3	fix	johnnycz	low viewsize and scr_newhud 1 refreshing via [scr_newhud_clear]
+2	change	aas	enable NetQuake progs support
+2	change	johnnycz	enable loading of NetQuake progs by default and add [sv_forcenqprogs]
+3	change	aas	disable switching to qw gamedir on single player new game / load
+3	feature	biomass	confirm IP in server browser address field also by Enter
+3	change	aas	restart MVDSV command removed
+2	feature	biomass	more fields support in teaminfo hud element (trackid)
+a	PrimeviL	for simpleitems
+b	darin	extensive testing
+b	ruskie	linux feedback
+b	sss	software build bugreporting
+z	[3500-4240]
