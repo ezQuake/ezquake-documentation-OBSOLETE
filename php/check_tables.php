@@ -67,7 +67,7 @@ class NonEmptyTableCheck extends TableCheck
 $tables = Array();
 $tables[] = new TableCheck("commands", "
   id SMALLINT UNSIGNED AUTO_INCREMENT,
-  name CHAR(32) NOT NULL DEFAULT '' UNIQUE,
+  name VARCHAR(64) NOT NULL DEFAULT '' UNIQUE,
   active TINYINT UNSIGNED NOT NULL DEFAULT 1,
   description TEXT,
   syntax TEXT,
@@ -99,7 +99,7 @@ $tables[] = new TableCheck("variables", "
 
   id SMALLINT UNSIGNED AUTO_INCREMENT,
   id_vargroup SMALLINT UNSIGNED NOT NULL DEFAULT 0,
-  name CHAR(32) NOT NULL DEFAULT '' UNIQUE,
+  name VARCHAR(64) NOT NULL DEFAULT '' UNIQUE,
   active TINYINT UNSIGNED NOT NULL DEFAULT 1,
   description TEXT,
   type ENUM('integer', 'float', 'string', 'boolean', 'enum'),
@@ -111,13 +111,13 @@ $tables[] = new TableCheck("variables", "
 
 $tables[] = new TableCheck("variables_phys", "
 
-  name CHAR(32) NOT NULL DEFAULT '',
+  name VARCHAR(64) NOT NULL DEFAULT '',
   PRIMARY KEY(name)
 ");
 
 $tables[] = new TableCheck("commands_phys", "
 
-  name CHAR(32) NOT NULL DEFAULT '',
+  name VARCHAR(64) NOT NULL DEFAULT '',
   PRIMARY KEY(name)
 ");
 
