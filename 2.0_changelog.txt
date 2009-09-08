@@ -1,11 +1,11 @@
 0	ezQuake 2.0 - coming in Q3 2009
-2	feature	PhrostByte	[sshot_name] prefix screenshots with map name
+2	feature	PhrostByte	[sshot_autoname] prefix screenshots with map name
 3	feature	johnnycz	[cl_weaponhide_axe] axe as optional dummy weapon
 1	feature	qqshka	mvd cutting &amp; qtv recording with [mvdrecord] and [mvdstop]
 3	feature	johnnycz	inputlag hud item for measuring your reaction time
 2	feature	R00k	server AntiWallHack tweak
 2	feature	Dirk	linux joystick support
-2	feature	johnnycz	[r_viewlastfired] view last fired weapon instead of the current one
+2	feature	johnnycz	[r_viewmodellastfired] view last fired weapon instead of the current one
 3	change	DrugsBunny	better default water color when using [r_drawflat]
 3	feature	johnnycz	[in_di_buffered] switch between "Immediate data" and buffered Direct Input modes (doesn't affect input lag)
 1	feature	johnnycz	initial [irc] support
@@ -30,7 +30,7 @@
 3	change	johnnycz	adjusted some graphics default values
 3	feature	johnnycz	[sb_pingsdump] writes pings to servers into a text file
 2	feature	cokeman	[qtv_reconnect]
-3	feature	johnnycz	[sb_sourceadd], [sb_sourceupdate], f_sbupdatesourcesdone trigger
+3	feature	johnnycz	[sb_sourceadd], [sb_sourcesupdate], f_sbupdatesourcesdone trigger
 2	fix	johnnycz	server browser source deletion crash
 1	feature	cokeman	multimonitor support, fullscreen mode will start on the screen where the window is placed
 3	feature	qqshka	unfinished console lines are put in console history too (accessible via uparrow)
@@ -80,7 +80,7 @@
 2	feature	aas	[con_prompt_charcode]
 3	fix	biomass	shift key detected properly in funchars mode 0
 2	feature	johnnycz	[cl_proxyaddr] easier usage of QWfwd
-3	fix	johnnycz	[gl_particle_gibtrails] work now
+3	fix	johnnycz	[gl_particle_gibtrails] works now
 3	fix	johnnycz	refresh players coloring after joining the game
 3	fix	hexum	cfg_save created config wasn't found by subsequent cfg_load
 3	change	tonik	disable "checking ..." messages for local server
@@ -88,7 +88,7 @@
 2	feature	tonik	entity hiding - KTX alpha race mode uses this
 2	feature	moodless	version command prints more info
 1	feature	johnnycz	proper support for QWFwd in server browser
-1	feature	qqshka	[cl_early_packets] lowers the ping feeling on some connections
+1	feature	qqshka	[cl_earlypackets] lowers the ping feeling on some connections
 2	feature	tonik	more packet entities support
 2	feature	johnnycz	[sb_listcache] caches the list of active servers, allows fast refresh of server browser after startup
 3	change	johnnycz	messagemode2 triggers messagemodeqtvtogame when qtv observing, saves additional key binding
