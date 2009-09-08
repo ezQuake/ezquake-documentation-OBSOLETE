@@ -1,4 +1,4 @@
-0	ezQuake 2.0 - coming in Q3 2009
+0	ezQuake 2.0 - coming in Sep/Oct 2009
 2	feature	PhrostByte	[sshot_autoname] prefix screenshots with map name
 3	feature	johnnycz	[cl_weaponhide_axe] axe as optional dummy weapon
 1	feature	qqshka	mvd cutting &amp; qtv recording with [mvdrecord] and [mvdstop]
@@ -133,7 +133,8 @@
 3	change	aas	restart MVDSV command removed
 2	feature	biomass	more fields support in teaminfo hud element (trackid)
 a	PrimeviL	for simpleitems
-b	darin	extensive testing
-b	ruskie	linux feedback
-b	sss	software build bugreporting
+b	darin	for extensive testing
+b	ruskie	for linux feedback
+b	sss	for software build bugreporting
+b	HangTime	for updating settings descriptions
 z	[3500-4240]
