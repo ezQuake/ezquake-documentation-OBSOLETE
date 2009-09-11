@@ -132,6 +132,7 @@
 3	feature	biomass	confirm IP in server browser address field also by Enter
 3	change	aas	restart MVDSV command removed
 2	feature	biomass	more fields support in teaminfo hud element (trackid)
+1	feature	biomass	$lastip now supports named hostnames such as wargamez.dk:27501
 a	PrimeviL	for simpleitems
 b	darin	for extensive testing
 b	ruskie	for linux feedback
