@@ -3,7 +3,6 @@
 3	feature	johnnycz	[cl_weaponhide_axe] axe as optional dummy weapon
 1	feature	qqshka	mvd cutting &amp; qtv recording with [mvdrecord] and [mvdstop]
 3	feature	johnnycz	inputlag hud item for measuring your reaction time
-2	feature	R00k	server AntiWallHack tweak
 2	feature	Dirk	linux joystick support
 2	feature	johnnycz	[r_viewmodellastfired] view last fired weapon instead of the current one
 3	change	DrugsBunny	better default water color when using [r_drawflat]
