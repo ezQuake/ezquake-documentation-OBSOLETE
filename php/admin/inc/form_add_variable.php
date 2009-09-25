@@ -135,7 +135,7 @@
   </div>
   <label for="v_remarks">Remarks:<br /><textarea name="v_remarks" id="v_remarks" cols="50" rows="5"><?=$remarks?></textarea></label><br />
 </fieldset>
-<p><button type="reset" onclick="Init()">Reset</button> <button type="submit">Submit</button></p>
+<p><button type="submit">Submit</button></p>
 </form>
 
 <?php
