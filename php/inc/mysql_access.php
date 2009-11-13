@@ -25,7 +25,7 @@
             . mysql_errno(). " - ". mysql_error());
 
     mysql_select_db($mysql_db, $db);
-    if (!db)
+    if (!$db)
         die("Couldn't select database.");
 
 function my_mysql_query($query)
@@ -42,10 +42,10 @@ function my_mysql_query($query)
             echo "<p><code>$query</code></p>";
             
         echo("<p class=\"error\">".mysql_error()."</p>");
-        return False;
+        return false;
     }
     else
-    return $r;
+    	return $r;
 }
 
 function dbSQL( $sql )

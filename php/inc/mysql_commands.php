@@ -218,7 +218,7 @@ class DocsData
     { 
         if (($rows = (int) $rows) < 1) $rows = 20;
         $sql = "
-        SELECT c.name as Entry, h.action as Action, u.name as User, DATE_FORMAT(h.time, '%Y-%m-%d %h:%i') as Time
+        SELECT c.id as Id, c.name as Entry, h.action as Action, u.name as User, DATE_FORMAT(h.time, '%Y-%m-%d %h:%i') as Time
         FROM {$this->tblPrefix}_history as h, ".TBL_NAME_USERS." as u, {$this->tblPrefix} as c
         WHERE u.id = h.id_user && c.id = h.{$this->foreignkey}
         ORDER BY h.id DESC LIMIT {$rows};

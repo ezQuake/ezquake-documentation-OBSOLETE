@@ -94,21 +94,12 @@ class DocsForms
         
         if (!($hist = $this->data->GetHistory($rows)))
             return False;
-        
-        echo "\n\n<table><thead><tr>";
-        $head = array_keys($hist[0]);
-        foreach ($head as $fieldname)
-            echo "<td>{$fieldname}</td>";
-        
-        echo "</tr></thead>\n<tbody>\n";
-        
+
+		echo "\n\n<table><thead><tr><td>Entry</td><td>Action</td><td>User</td><td>Time</td></tr></thead>\n<tbody>\n";
+
         foreach ($hist as $row)
-        {   
-            echo "<tr>";
-            foreach ($row as $field) 
-                echo "<td>{$field}</td>";
- 
-            echo "</tr>";
+        {
+			echo "<tr><td><a href=\"/admin/index.php?action={$this->editaction}&id={$row['Id']}\">{$row['Entry']}</a></td><td>{$row['Action']}</td><td>{$row['User']}</td><td>{$row['Time']}</td></tr>";
         }
         
         echo "\n</tbody></table>\n\n";
