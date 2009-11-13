@@ -99,7 +99,7 @@ class DocsForms
 
         foreach ($hist as $row)
         {
-			echo "<tr><td><a href=\"/admin/index.php?action={$this->editaction}&id={$row['Id']}\">{$row['Entry']}</a></td><td>{$row['Action']}</td><td>{$row['User']}</td><td>{$row['Time']}</td></tr>";
+			echo "<tr><td><a href=\"?action={$this->editaction}&id={$row['Id']}\">{$row['Entry']}</a></td><td>{$row['Action']}</td><td>{$row['User']}</td><td>{$row['Time']}</td></tr>";
         }
         
         echo "\n</tbody></table>\n\n";
