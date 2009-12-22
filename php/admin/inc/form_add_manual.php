@@ -43,7 +43,7 @@
   <label for="m_name">Name:<br /><input type="text" name="m_name" id="m_name" value="<?=$name?>" /></label><br />
   <p>Name is used only in URL, it should be lower cases, without spaces or any other special characters. Use comma '-' for separating words rather than the underscore '_'.<br />
   Example: Title is "The Bogus &amp; Great Feature" so you should choose name like "bogus-and-great-feature".</p>
-  <label for="m_remarks">Remarks:<br /><textarea name="m_content" id="m_content" cols="60" rows="30"><?=$content?></textarea></label><br />
+  <label for="m_remarks">Content:<br /><textarea name="m_content" id="m_content" cols="90" rows="30"><?=$content?></textarea></label><br />
 </fieldset>
 <p><button type="submit">Submit</button> </p>
 </form>
