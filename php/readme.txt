@@ -1,5 +1,5 @@
 ezQuake Documentation System
-made by JohnNy_cz
+made by Jan "JohnNy_cz" Raszyk
 GNU General Public License 2
 
 Requirements:
