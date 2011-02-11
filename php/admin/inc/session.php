@@ -66,6 +66,14 @@ class Session
         return my_mysql_query("UPDATE {$this->sessionsTable} SET id_user = {$iduser} WHERE id = {$idsession} LIMIT 1;");
     }
     
+    function GetUserIp()
+    {
+        $allIps = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        $allIpsArray = explode(',', $allIps);
+        $firstIp = $allIpsArray[0];
+        return $firstIp;
+    }
+    
     function GetSessionID()
     /**
      * Initializes current user Session and returns sessionID
@@ -73,8 +81,8 @@ class Session
     {
         global $foundOrCreated;
         $table = $this->sessionsTable;
-        $p_ip = $_SERVER["REMOTE_ADDR"];
-        $p_host = gethostbyaddr($_SERVER["REMOTE_ADDR"]);
+        $p_ip = $this->GetUserIp();
+        $p_host = gethostbyaddr($p_ip);
         $p_browser = $_SERVER["HTTP_USER_AGENT"];
         $p_idstr = $_COOKIE["idstr"];
         if (strlen($p_idstr) != IDSTRLEN) 
