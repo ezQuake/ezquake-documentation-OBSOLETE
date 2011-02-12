@@ -1,0 +1,96 @@
+0	ezQuake 2.1 - coming in Apr 2011
+3	feature	johnnycz	[cl_startupdemo] plays a demo on startup and stops on key press
+2	change	aas	disabled loading of default.cfg
+2	feature	qqshka	pasting in linux
+2	fix	biomass	players can look around when console is down
+3	fix	sss	successful config exec message
+3	fix	johnnycz	unknown command when diconnected message
+2	fix	biomass	[gl_smoothfont] fixes
+2	change	sss	load files from userdir too
+2	change	aas	convert nicks to white color in frag tracker with images
+2	change	cuky	powerupshells default colors adjusted
+2	fix	sss	[cl_nopred_on_entity] fixes jerking when standing on moving platforms
+1	change	aas	[gl_fb_models] affects all models except eyes
+3	feature	aas	[scr_scoreboard_fadescreen] separate fade setting for scoreboard
+3	fix	sss	in SW grenade had only one trail
+2	feature	aas	[cfg_use_gamedir] load/save config to current game mod dir
+2	feature	KaszpiR	tracker images
+3	feature	aas	rail and coil tracker images
+1	feature	aas	[score_own] [score_enemy] [score_difference] [+score_position] HUD elements
+2	feature	aas	[+score_bar] similar to +scores in KTX
+1	feature	aas	[bar_armor] [bar_health] HUD elements
+2	change	aas	removed -dedicated command-line option
+2	change	aas	removed "serveronly" code parts
+1	fix	aas	+cfg_load on command-line should now lead to proper config execution (for those sinners who still use this way)
+3	feature	sss	[show_velocity_3d]
+3	change	johnnycz	[r_nearclip] upper limit lowered to 4
+2	feature	tuna	iTunes pause/play on minimize/quit
+2	feature	qqshka	[qtvdemolist], similar to [qtvlist]
+2	change	johnnycz	[cl_idrive] always off in ruleset smackdown
+2	change	Medar	inbuilt teamplay messages updates
+2	feature	Medar	[tp_smgitemsoon] [tp_msgnocancel] [tp_msgpack]
+2	feature	aas	[con_completion_changed_mark]
+2	feature	aas	additional [con_completion_format] values
+2	feature	tuna	Mumble support in Mac OSX
+2	feature	qqshka	[demo_jump_mark] seeking special marks in demos, set marks with "demomark" cmd while server is recording
+2	fix	Medar	fix suicide colors with cl_useimagesinfraglog
+2	feature	Medar	map right shift on linux, add support for some extra keys on linux
+2	feature	johnnycz	[set_eval] richer alternative of [set_calc]
+3	change	johnnycz	unified settings for all file browsers
+2	change	aas	updated 3rd party libs
+3	fix	Medar	minor fixes in Linux software version
+1	feature	johnnycz	ported FTE plugin system
+1	feature	qqshka	[gl_texturemode2d] default GL_LINEAR
+2	change	johnnycz	cl_earlypackets default to 1
+2	feature	johnnycz	QTV in-game menu
+2	feature	johnnycz	support for /qtvplay http://..watch.qtv?sid=..
+2	fix	Medar	make [con_funchars_mode] work without WITH_KEYMAP
+2	feature	qqshka	[gl_squareparticles] toggles between circle and square particles
+3	fix	qqshka	apply gl_anisotrophy only to mip-mapped (in 3D) textures
+1	change	johnnycz	add megahealth and 15 health pikcup sounds to f_modified
+3	fix	qqshka	r_fullbright fixed
+2	feature	tuna	Mac OSX: growl support
+2	feature	tuna	Mac OSX: bounce dock icon on activity
+2	fix	johnnycz	itemsclock fixes
+2	feature	sss	[gl_particle_style]
+2	feature	johnnycz	[vid_conaspect] auto-adjusts vid_conheight to vid_conwidth
+3	change	johnnycz	[cl_upspeed] default 400
+3	change	johnnycz	[cfg_save] prints full path of saved config
+2	feature	johnnycz	[teamlock] to lock enemy/teammate detection on one team
+2	fix	qqshka	[gl_ext_texture_compression] fixed, works after startup
+3	fix	Medar	player prediction fix
+3	fix	Medar	send all delayed packets on disconnect, fixes "ghost" player bug
+3	fix	David Wiberg	add "dir up" to browsing of archives
+3	fix	biomass and gronsaken	dates of zipped demos were incorrect on Windows
+3	feature	aas	ctrl+del, ctrl+backspace delete whole word
+3	change	aas	mwhook removed
+3	feature	aas	[r_tracker_postive_enemy_suicide]
+2	fix	johnnycz	fix starting of multiplayer game after singleplayer session
+2	feature	johnnycz	[troubleshoot] command
+3	fix	qqshka	third person cam smoother
+3	fix	tuna	fix direct input unload
+3	fix	qqshka	fixes of [gl_ext_arb_texture_non_power_of_two]
+1	change	johnnycz	software-rendering config saved and loaded from configsw.cfg
+1	feature	tonik	GPL maps support (AquaShark's dm1..dm6+end simpletexture maps are supported)
+2	fix	tonik	make colored lights actually look good
+3	feature	johnnycz	server browser pings colorized
+3	fix	johnnycz	removed inputlag HUD element
+2	fix	Medar	gameclock desync when using demo_jump
+2	change	johnnycz	best route will always be used when sb_findroutes is enabled
+2	fix	johnnycz	do not save cl_delay_packet, cl_proxyaddr and hud_planmode into the config
+2	feature	johnnycz	HTTP (URL) source server support
+2	feature	johnnycz	[match_auto_logupload] auto match log upload
+2	feature	johnnycz	[observeqtv] join QTV with given server
+3	feature	johnnycz	flash taskbar when server gets full
+3	fix	johnnycz	fix rawsockets availability in Windows
+2	feature	Medar	[scr_autoid_barlength] and other scr_autoid improvements
+2	feature	tuna	Mac OSX: cmd+F toggles between fullscreen/windowed modes
+3	feature	Medar	+movedown +moveup toggle POVs
+2	feature	Medar	[demo_jump_status]
+2	feature	VVD	support for russian letters input in linux
+2	feature	Medar	[sys_inactivesound] for non-Windows builds
+3	fix	johnnycz	HUD bignum wouldn't show minus
+1	feature	qqshka	[voice] communication support, ported from FTEQW
+3	fix	johnnycz	server browser scrolling
+2	feature	johnnycz	server browser columns sortable with mouse
+3	fix	johnnycz	vsynclagfix+demo speed 0+alt-tabbed away led to freeze
