@@ -64,7 +64,7 @@
 3	fix	biomass and gronsaken	dates of zipped demos were incorrect on Windows
 3	feature	aas	ctrl+del, ctrl+backspace delete whole word
 3	change	aas	mwhook removed
-3	feature	aas	[r_tracker_postive_enemy_suicide]
+3	feature	aas	[r_tracker_positive_enemy_suicide]
 2	fix	johnnycz	fix starting of multiplayer game after singleplayer session
 2	feature	johnnycz	[troubleshoot] command
 3	fix	qqshka	third person cam smoother
