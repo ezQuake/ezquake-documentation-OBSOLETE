@@ -95,3 +95,4 @@
 2	feature	johnnycz	server browser columns sortable with mouse
 3	fix	johnnycz	vsynclagfix+demo speed 0+alt-tabbed away led to freeze
 1	feature	dimman	new linux sound code, ported from fodquake
+3	change	aas	cmd+v insead of ctrl+v on Mac OS X (nomination for the best change of 2.1)
