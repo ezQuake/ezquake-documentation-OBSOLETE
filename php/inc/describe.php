@@ -129,7 +129,7 @@ function MakeArchive($file, &$db)
     echo "<p>Files created</p>\n";
     
     echo "<p>Executing archiver...</p>\n";
-    passthru("cd ".BASEPATH."/{$file}s ; find . | zip -9 -@ ../{$file}s.zip", $retval);
+    passthru("cd ".BASEPATH." ; tar zcfv {$file}s.tar.gz {$file}s", $retval);
     echo "<p>Return value was {$retval}</p>\n";
     echo "<p>Release finished</p>";
 }
