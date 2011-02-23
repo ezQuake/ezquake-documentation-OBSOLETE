@@ -13,9 +13,9 @@ class Downloader
 {
 	function DownloadArchive($file)
 	{
-        header("Content-type: application/zip");
-        header('Content-Disposition: attachment; filename="ezquake_describe_'.$file.'.zip"');
-        readfile(BASEPATH."/{$file}.zip");
+        header("Content-type: application/x-gzip");
+        header('Content-Disposition: attachment; filename="ezquake_describe_'.$file.'.tar.gz"');
+        readfile(BASEPATH."/{$file}.tar.gz");
         die;
     }
     
