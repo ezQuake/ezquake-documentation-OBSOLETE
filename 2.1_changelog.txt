@@ -28,7 +28,7 @@
 2	feature	qqshka	[qtvdemolist], similar to [qtvlist]
 2	change	johnnycz	[cl_idrive] always off in ruleset smackdown
 2	change	Medar	inbuilt teamplay messages updates
-2	feature	Medar	[tp_smgitemsoon] [tp_msgnocancel] [tp_msgpack]
+2	feature	Medar	[tp_msgitemsoon] [tp_msgnocancel] [tp_msgpack]
 2	feature	aas	[con_completion_changed_mark]
 2	feature	aas	additional [con_completion_format] values
 2	feature	tuna	Mumble support in Mac OSX
