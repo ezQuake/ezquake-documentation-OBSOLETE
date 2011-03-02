@@ -57,7 +57,7 @@
 3	change	johnnycz	[cl_upspeed] default 400
 3	change	johnnycz	[cfg_save] prints full path of saved config
 2	feature	johnnycz	[teamlock] to lock enemy/teammate detection on one team
-2	fix	qqshka	[gl_ext_texture_compression] fixed, works after startup
+2	fix	johnnycz	[gl_ext_texture_compression] fixed, works after startup
 3	fix	Medar	player prediction fix
 3	fix	Medar	send all delayed packets on disconnect, fixes "ghost" player bug
 3	fix	David Wiberg	add "dir up" to browsing of archives
