@@ -9,7 +9,7 @@
 2	change	sss	load files from userdir too
 2	change	aas	convert nicks to white color in frag tracker with images
 2	change	cuky	powerupshells default colors adjusted
-2	fix	sss	[cl_nopred_on_entity] fixes jerking when standing on moving platforms
+2	fix	sss	[cl_nolerp_on_entity] fixes jerking when standing on moving platforms
 1	change	aas	[gl_fb_models] affects all models except eyes
 3	feature	aas	[scr_scoreboard_fadescreen] separate fade setting for scoreboard
 3	fix	sss	in SW grenade had only one trail
