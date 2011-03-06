@@ -81,6 +81,7 @@
 2	feature	johnnycz	HTTP (URL) source server support
 2	feature	johnnycz	[match_auto_logupload] auto match log upload
 2	feature	johnnycz	[observeqtv] join QTV with given server
+2	feature	johnnycz	Q key in server browser joins QTV with given server
 3	feature	johnnycz	flash taskbar when server gets full
 3	fix	johnnycz	fix rawsockets availability in Windows
 2	feature	Medar	[scr_autoid_barlength] and other scr_autoid improvements
