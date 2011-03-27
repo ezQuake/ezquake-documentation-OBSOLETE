@@ -10,7 +10,7 @@
 2	change	aas	convert nicks to white color in frag tracker with images
 2	change	cuky	powerupshells default colors adjusted
 2	fix	sss	[cl_nolerp_on_entity] fixes jerking when standing on moving platforms
-1	change	aas	[gl_fb_models] affects all models except eyes
+1	change	aas	[gl_fb_models] affects all models except eyes and backpack
 3	feature	aas	[scr_scoreboard_fadescreen] separate fade setting for scoreboard
 3	fix	sss	in SW grenade had only one trail
 2	feature	aas	[cfg_use_gamedir] load/save config to current game mod dir
@@ -98,3 +98,4 @@
 3	change	aas	cmd+v instead of ctrl+v on Mac OS X (nomination for the best change of 2.1)
 2	fix	dimman	jpeg screeshots work on linux64
 b	localghost	for nightly builds migration and maintenance
+3	fix	aas	fix for saving user-created teamplay variables
