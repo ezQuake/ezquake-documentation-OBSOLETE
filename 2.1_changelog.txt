@@ -16,7 +16,7 @@
 2	feature	aas	[cfg_use_gamedir] load/save config to current game mod dir
 2	feature	KaszpiR	tracker images
 3	feature	aas	rail and coil tracker images
-1	feature	aas	[score_own] [score_enemy] [score_difference] [+score_position] HUD elements
+1	feature	aas	[score_own] [score_enemy] [score_difference] [score_position] [score_bar] HUD elements
 2	feature	aas	[+score_bar] similar to +scores in KTX
 1	feature	aas	[bar_armor] [bar_health] HUD elements
 2	change	aas	removed -dedicated command-line option
