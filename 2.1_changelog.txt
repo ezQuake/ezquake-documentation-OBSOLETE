@@ -97,5 +97,6 @@
 1	feature	dimman	new linux sound code, ported from fodquake
 3	change	aas	cmd+v instead of ctrl+v on Mac OS X (nomination for the best change of 2.1)
 2	fix	dimman	jpeg screeshots work on linux64
+2	fix	dimman	dual monitors mouse handling
 b	localghost	for nightly builds migration and maintenance
 3	fix	aas	fix for saving user-created teamplay variables
