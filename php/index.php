@@ -61,7 +61,7 @@
 <?php $renderer->RenderContent(); ?>
 
 
-<p id="last-update">Last update: <?=date("d.m.Y H:i T",$renderer->lastupdate)?>, made by <?=AUTHOR_INFO?> | <a href="http://ezquake.sourceforge.net/docs/about">ezQDocs</a></p>
+<p id="last-update">Last update: <?=date("d.m.Y H:i T",$renderer->lastupdate)?><br /><a href="http://ezquake.sourceforge.net/docs/about">ezQDocs</a></p>
 <p><a href="http://sourceforge.net/projects/ezquake"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=117445&amp;type=2" width="125" height="37" alt="SourceForge.net Logo" /></a></p>
 </body>
 </html>

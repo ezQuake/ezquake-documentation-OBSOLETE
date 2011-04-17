@@ -8,6 +8,7 @@ GNU General Public License 2
 preview:
 http://ezquake.sourceforge.net/docs/
 source:
-http://ezquake.svn.sourceforge.net/viewvc/ezquake/trunk/documentation/php/
+https://github.com/ezQuake/ezquake-documentation/tree/master/php
 author:
 http://sourceforge.net/users/johnnycz/
+http://johnny.wz.cz/
